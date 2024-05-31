@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #002255;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.container1 {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  padding: 20px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.5s, padding 0.5s;
+  z-index: 1000;
+  background-color: #001531;
+  margin-bottom: 100px;
+}
+
+header.rolagem {
+  background-color: #fff;
+  padding: 10px 4%;
+}
+
+header.rolagem a,
+header.rolagem i {
+  color: #004ca3;
+}
+
+header i {
+  font-size: 30px;
+  color: #fff;
+}
+
+header.rolagem i {
+  color: #004ca3;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.2s;
+}
+
+header ul li a.active,
+header ul li a:hover {
+  color: #004ca3;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #004ca3;
+  transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+header ul li a:hover::after,
+header ul li a.active::after {
+  width: 100%;
+  left: 0;
+  background: #004ca3;
+}
+
+.btn-contato button {
+  width: 120px;
+  height: 40px;
+  border: 0;
+  background-color: #004ca3;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.btn-contato button:hover {
+  background-color: rgba(6, 75, 139, 0.7);
+}
+section {
+  padding: 90px 4%;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+}
+
+section p {
+  font-size: 20px;
+}
+
+#menu-mobile {
+  background-color: #1111119f;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 77px;
+  right: 0;
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+#menu-mobile nav a {
+  display: block;
+  color: #ffffff;
+  padding: 20px 30px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#menu-mobile nav a:hover {
+  background-color: #383838;
+}
+
+#btn-menu,
+#btn-menu-close {
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1110px) {
+  .menu,
+  .social {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  #btn-menu,
+  #menu-mobile {
+    display: block;
+  }
+
+  #menu-mobile.active {
+    height: calc(100vh - 77px);
+    visibility: visible;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 10px 4%;
+    font-size: 15px;
+  }
+  header ul li a:hover::after,
+  header ul li a.active::after {
+    width: 100%;
+    left: 0;
+    background: none;
+  }
+
+  header ul li {
+    margin: 0 10px;
+  }
+
+  .banner h1 {
+    font-size: 3em;
+  }
+
+  .conteudo {
+    padding: 20px 4%;
+  }
+
+  .conteudo h2 {
+    font-size: 2em;
+  }
+
+  .conteudo p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  header ul li {
+    margin: 0 15px;
+  }
+}

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  height: 100vh;
+  background-color: #002255;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  padding: 20px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.5s, padding 0.5s;
+  z-index: 1000;
+}
+
+header.rolagem {
+  background-color: #fff;
+  padding: 10px 4%;
+}
+
+header.rolagem a,
+header.rolagem i {
+  color: #004ca3;
+}
+
+header i {
+  font-size: 30px;
+  color: #fff;
+}
+
+header.rolagem i {
+  color: #004ca3;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.2s;
+}
+
+header ul li a.active,
+header ul li a:hover {
+  color: #004ca3;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #004ca3;
+  transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+header ul li a:hover::after,
+header ul li a.active::after {
+  width: 100%;
+  left: 0;
+  background: #004ca3;
+}
+
+.btn-contato button {
+  width: 120px;
+  height: 40px;
+  border: 0;
+  background-color: #004ca3;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.btn-contato button:hover {
+  background-color: rgba(6, 75, 139, 0.7);
+}
+
+.banner {
+  height: 100vh;
+  background-image: url(../img/pexels-kellie-churchman-371878-1001682.jpg);
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  margin-top: -120px;
+  font-size: 4em;
+}
+
+.banner h1 span {
+  color: #004ca3;
+}
+.conteudo {
+  padding: 40px 4%;
+  color: #fff;
+  background-color: #002255;
+}
+
+.conteudo h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #0866d1; /* Azul */
+}
+
+.conteudo p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff; /* Branco */
+}
+
+.conteudo .highlight {
+  color: #0866d1; /* Azul */
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 10px 4%;
+    font-size: 15px;
+  }
+  header ul li a:hover::after,
+  header ul li a.active::after {
+    width: 100%;
+    left: 0;
+    background: none;
+  }
+
+  header ul li {
+    margin: 0 10px;
+  }
+
+  .banner h1 {
+    font-size: 3em;
+  }
+
+  .conteudo {
+    padding: 20px 4%;
+  }
+
+  .conteudo h2 {
+    font-size: 2em;
+  }
+
+  .conteudo p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  header ul li {
+    margin: 0 15px;
+  }
+}
