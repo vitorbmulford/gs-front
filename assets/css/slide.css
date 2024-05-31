@@ -11,6 +11,9 @@ html {
   scroll-behavior: smooth;
   background-color: #002255;
 }
+body {
+  padding-top: 100px; /* Adicione um padding para o tamanho do cabeçalho */
+}
 
 .container {
   max-width: 1080px;
@@ -32,8 +35,6 @@ header {
   background-color: transparent;
   transition: background-color 0.5s, padding 0.5s;
   z-index: 1000;
-  background-color: #001531;
-  margin-bottom: 100px;
 }
 
 header.rolagem {
@@ -113,7 +114,9 @@ header ul li a.active::after {
 section {
   padding: 90px 4%;
 }
-
+.slider {
+  margin-top: 100px; /* Adicione um margin para o tamanho do cabeçalho */
+}
 section h2 {
   font-size: 2em;
   margin-bottom: 25px;
@@ -175,43 +178,5 @@ section p {
   #menu-mobile.active {
     height: calc(100vh - 77px);
     visibility: visible;
-  }
-}
-@media only screen and (max-width: 767px) {
-  header {
-    padding: 10px 4%;
-    font-size: 15px;
-  }
-  header ul li a:hover::after,
-  header ul li a.active::after {
-    width: 100%;
-    left: 0;
-    background: none;
-  }
-
-  header ul li {
-    margin: 0 10px;
-  }
-
-  .banner h1 {
-    font-size: 3em;
-  }
-
-  .conteudo {
-    padding: 20px 4%;
-  }
-
-  .conteudo h2 {
-    font-size: 2em;
-  }
-
-  .conteudo p {
-    font-size: 1em;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  header ul li {
-    margin: 0 15px;
   }
 }
