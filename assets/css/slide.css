@@ -9,10 +9,13 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #002255;
+  background-color: #001e4b;
 }
 body {
   padding-top: 80px;
+}
+p{
+  color: #ffffff;
 }
 .container {
   max-width: 1080px;
@@ -111,6 +114,9 @@ header ul li a.active::after {
 
 .btn-contato button:hover {
   background-color: rgba(6, 75, 139, 0.7);
+}
+h2 {
+  color: #0866d1; /* Azul */
 }
 section {
   padding: 90px 4%;

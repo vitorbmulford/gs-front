@@ -1,10 +1,10 @@
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
+  let header = document.querySelector("header");
   header.classList.toggle("rolagem", window.scrollY > 50);
 });
 
-var radio = document.querySelector(".manual-btn");
-var cont = 1;
+let radio = document.querySelector(".manual-btn");
+let cont = 1;
 
 document.getElementById("radio1").checked = true;
 
